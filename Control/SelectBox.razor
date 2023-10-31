@@ -1,0 +1,11 @@
+@typeparam T
+<select @attributes=@Attributes @onchange=@SelectionChanged>
+    @if (IsDefaultItem)
+    {
+        <option value="0">@DefaultItemMessage</option>
+    }
+    @foreach (SelectBoxItem item in _displayItems)
+    {
+        <option value="@item.ID">@item.Name</option>
+    }
+</select>
