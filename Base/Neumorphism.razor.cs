@@ -9,6 +9,9 @@ namespace fukicycle.blazor.neumorphism.components.Base
 {
     public partial class Neumorphism
     {
+        [Parameter(CaptureUnmatchedValues = true)]
+        public Dictionary<string, object>? Attributes { get; set; }
+
         [Parameter]
         public RenderFragment ChildContent { get; set; } = null!;
 
