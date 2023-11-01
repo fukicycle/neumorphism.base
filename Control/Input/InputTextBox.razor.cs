@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace fukicycle.blazor.neumorphism.components.Control
+namespace fukicycle.blazor.neumorphism.components.Control.Input
 {
-    public partial class InputBox<T>
+    public partial class InputTextBox
     {
         [Parameter(CaptureUnmatchedValues = true)]
         public Dictionary<string, object>? Attributes { get; set; }
@@ -27,7 +27,7 @@ namespace fukicycle.blazor.neumorphism.components.Control
         public EventCallback<ChangeEventArgs> OnInputChanged { get; set; }
 
         [Parameter]
-        public T Value { get; set; } = default!;
+        public string? Value { get; set; } = null;
 
     }
 }
