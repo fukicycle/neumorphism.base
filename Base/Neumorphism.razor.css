@@ -1,9 +1,13 @@
 ﻿#neumorphism-base {
+    --nf-base: #e0e0e0;
+    --nf-light: #ffffff;
+    --nf-dark: #bebebe;
+}
+
+#neumorphism-base {
     padding: .5rem;
     border-radius: .7rem;
-    background: #e0e0e0;
-    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-    margin: .5rem;
+    margin: 1rem;
 }
 
     #neumorphism-base > ::deep * {
