@@ -1,6 +1,8 @@
 # Neumorphism.Base
-![Nuget](https://www.nuget.org/packages/Neumorphism.Design.Base)
-![GitHub](https://github.com/fukicycle/neumorphism.design.base)
+[![Nuget](https://img.shields.io/nuget/v/Neumorphism.Design.Base.svg)](https://www.nuget.org/packages/Neumorphism.Design.Base)
+
+[![Build and publish packages](https://github.com/fukicycle/neumorphism.design.base/actions/workflows/production.yml/badge.svg)](https://github.com/fukicycle/neumorphism.design.base/actions/workflows/production.yml)
+
 Provides a neumorphism design base for blazor app. It is very easy to apply neumophism design.
 
 ## Features
