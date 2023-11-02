@@ -12,11 +12,11 @@ Provides a neumorphism design base for blazor app. It is very easy to apply neum
 ### 1. install package.
 `Neumorphism.Base` is available for download and installation as [NuGet packages](https://www.nuget.org/packages/Neumorphism.Design.Base).
 ```
-dotnet add package Neumorphism.Desgin.Base --version <version>
+dotnet add package Neumorphism.Design.Base --version <version>
 ```
 
 ### 2. Create your blazor app.
-1. Add using `fukicycle.Blazor.Neumorphism.Design.Base` (_Imports.razor)
+1. Add using `fukicycle.Blazor.Neumorphism.Design.Base` (`_Imports.razor`)
 ```diff
 @using System.Net.Http
 @using Microsoft.AspNetCore.Authorization
@@ -29,6 +29,10 @@ dotnet add package Neumorphism.Desgin.Base --version <version>
 @using BlazorApp1
 @using BlazorApp1.Shared
 + @using fukicycle.Blazor.Neumorphism.Design.Base
+```
+1. Add `UseNeumorphism(BaseColor.Parse("#e0e0e0"))` (`Program.cs`)
+```csharp
+app.UseNeumorphism(BaseColor.Parse("#e0e0e0"));
 ```
 1. Add `Neumorphism` components! (`Index.razor`)
 ```csharp
