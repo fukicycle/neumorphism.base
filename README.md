@@ -30,9 +30,9 @@ dotnet add package Neumorphism.Design.Base --version <version>
 @using BlazorApp1.Shared
 + @using fukicycle.Blazor.Neumorphism.Design.Base
 ```
-1. Add `UseNeumorphism(BaseColor.Parse("#e0e0e0"))` (`Program.cs`)
+1. Add `UseNeumorphism(BaseColor.Parse("#CDD6EE"))` (`Program.cs`)
 ```csharp
-app.UseNeumorphism(BaseColor.Parse("#e0e0e0"));
+app.UseNeumorphism(BaseColor.Parse("#CDD6EE"));
 ```
 1. Add `Neumorphism` components! (`Index.razor`)
 ```razor
@@ -66,8 +66,10 @@ app.UseNeumorphism(BaseColor.Parse("#e0e0e0"));
         <div>Hello!</div>
     </div>
 </Neumorphism>
-
 ```
+
+**Please note that you have to set same color to root element. (`<body/>`)**
+
 <img width="292" alt="image" src="https://github.com/fukicycle/neumorphism.design.base/assets/106070646/7fd8d7ea-6dc0-423a-bd39-c550d94eedb4">
 
 ## Contributing
