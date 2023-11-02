@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <PackageId>Neumorphism.Design.Base</PackageId>
     <Title>Neumorphism.Design.Base</Title>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
     <Description>Provides a neumorphism desing for blazor app.</Description>
     <AssemblyName>Neumorphism.Design.Base</AssemblyName>
     <Authors>fukicycle</Authors>

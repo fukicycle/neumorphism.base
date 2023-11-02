@@ -1,6 +1,5 @@
 ﻿#neumorphism-base {
     padding: .5rem;
-    margin: 1rem;
 }
 
     #neumorphism-base > ::deep * {

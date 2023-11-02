@@ -69,7 +69,7 @@ namespace fukicycle.Blazor.Neumorphism.Design.Base
 
         private string _style = "";
 
-        private static int _offset = 9;
+        private static int _offset = 3;
         private static int _blur = _offset * 2;
         private string _borderRadius = ".7rem";
 
