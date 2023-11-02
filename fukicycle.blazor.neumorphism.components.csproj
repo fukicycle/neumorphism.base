@@ -4,6 +4,19 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+	  <PackageId>Neumorphism.Base</PackageId>
+	  <Title>Neumorphism.Base</Title>
+	  <Version>0.1.0</Version>
+	  <Description>Provides a neumorphism desing for blazor app.</Description>
+	  <AssemblyName>Neumorphism.Base</AssemblyName>
+	  <Authors>fukicycle</Authors>
+	  <PackageLicenseExpression>Apache2.0</PackageLicenseExpression>
+	  <PackageProjectUrl>https://github.com/fukicycle/neumorphism.components</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/fukicycle/neumorphism.components</RepositoryUrl>
+	  <PackageTags>blazor;blazorwasm;blazorserver;neumorphism</PackageTags>
+	  <Copyright>Copyright (c) 2023 fukicycle</Copyright>
+	  <RepositoryType>git</RepositoryType>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
 
