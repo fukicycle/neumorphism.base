@@ -1,12 +1,8 @@
-﻿using Microsoft.AspNetCore.Components;
-using System;
-using System.Collections.Generic;
+﻿using fukicycle.blazor.neumorphism.components;
+using Microsoft.AspNetCore.Components;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace fukicycle.blazor.neumorphism.components.Base
+namespace fukicycle.Blazor.Neumorphism.Design.Base
 {
     public partial class Neumorphism
     {
