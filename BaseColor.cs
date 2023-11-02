@@ -52,27 +52,29 @@ namespace fukicycle.Blazor.Neumorphism.Design.Base
 
         public string GetLightColor()
         {
-            Color color = System.Drawing.Color.FromArgb(Red, Green, Blue);
+            Color color = Color.FromArgb(Red, Green, Blue);
             HslColor hsl = HslColor.FromRgb(color);
-            hsl.L = hsl.L + 0.1f;
+            hsl.L = hsl.L + 0.08f;
             if (hsl.L > 1) hsl.L = 1;
             Color lightColor = HslColor.ToRgb(hsl);
             return "#" + lightColor.R.ToString("X2")
                 + lightColor.G.ToString("X2")
-                + lightColor.B.ToString("X2");
+                + lightColor.B.ToString("X2")
+                + 153.ToString("X2");
 
         }
 
         public string GetDarkColor()
         {
-            Color color = System.Drawing.Color.FromArgb(Red, Green, Blue);
+            Color color = Color.FromArgb(Red, Green, Blue);
             HslColor hsl = HslColor.FromRgb(color);
-            hsl.L = hsl.L - 0.1f;
+            hsl.L = hsl.L - 0.15f;
             if (hsl.L < 0) hsl.L = 0;
             Color darkColor = HslColor.ToRgb(hsl);
             return "#" + darkColor.R.ToString("X2")
                 + darkColor.G.ToString("X2")
-                + darkColor.B.ToString("X2");
+                + darkColor.B.ToString("X2")
+                + 153.ToString("X2");
         }
     }
 }
