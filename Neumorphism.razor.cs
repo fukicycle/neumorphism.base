@@ -51,16 +51,13 @@ namespace fukicycle.Blazor.Neumorphism.Design.Base
         }
 
         [Parameter]
-        public BaseColor Color
+        public string BorderRadius
         {
-            get => _color;
+            get => _borderRadius;
             set
             {
-                if (_color != value)
-                {
-                    _color = value;
-                    OnSettingChanged();
-                }
+                _borderRadius = value;
+                OnSettingChanged();
             }
         }
 
@@ -68,12 +65,13 @@ namespace fukicycle.Blazor.Neumorphism.Design.Base
         private RenderFragment _childContent = null!;
         private ShapeType _shapeType = ShapeType.FLOAT;
         private LightLocation _lightLocation = LightLocation.TOP_LEFT;
-        private BaseColor _color = new BaseColor(224, 224, 224);
+        private BaseColor _color = ColorSetting.BaseColor;
 
         private string _style = "";
 
-        private static int offset = 9;
-        private static int blur = offset * 2;
+        private static int _offset = 9;
+        private static int _blur = _offset * 2;
+        private string _borderRadius = ".7rem";
 
         protected override void OnInitialized()
         {
@@ -83,26 +81,26 @@ namespace fukicycle.Blazor.Neumorphism.Design.Base
 
         private void OnSettingChanged()
         {
-            string baseColor = Color.GetBaseColor();
-            string darkColor = Color.GetDarkColor();
-            string lightColor = Color.GetLightColor();
-            _style = "";
+            string baseColor = _color.GetBaseColor();
+            string darkColor = _color.GetDarkColor();
+            string lightColor = _color.GetLightColor();
+            _style = $"border-radius: {_borderRadius}; ";
             if (ShapeType == ShapeType.SINK)
             {
                 _style += $"background: {baseColor};";
                 switch (LightLocation)
                 {
                     case LightLocation.TOP_LEFT:
-                        _style += $"box-shadow: inset {offset}px {offset}px {blur}px {darkColor}, inset -{offset}px -{offset}px {blur}px {lightColor};";
+                        _style += $"box-shadow: inset {_offset}px {_offset}px {_blur}px {darkColor}, inset -{_offset}px -{_offset}px {_blur}px {lightColor};";
                         break;
                     case LightLocation.TOP_RIGHT:
-                        _style += $"box-shadow: inset -{offset}px {offset}px {blur}px {darkColor}, inset {offset}px -{offset}px {blur}px {lightColor};";
+                        _style += $"box-shadow: inset -{_offset}px {_offset}px {_blur}px {darkColor}, inset {_offset}px -{_offset}px {_blur}px {lightColor};";
                         break;
                     case LightLocation.BOTTOM_LEFT:
-                        _style += $"box-shadow: inset {offset}px -{offset}px {blur}px {darkColor}, inset -{offset}px {offset}px {blur}px {lightColor};";
+                        _style += $"box-shadow: inset {_offset}px -{_offset}px {_blur}px {darkColor}, inset -{_offset}px {_offset}px {_blur}px {lightColor};";
                         break;
                     case LightLocation.BOTTOM_RIGHT:
-                        _style += $"box-shadow: inset -{offset}px -{offset}px {blur}px {darkColor}, inset {offset}px {offset}px {blur}px {lightColor};";
+                        _style += $"box-shadow: inset -{_offset}px -{_offset}px {_blur}px {darkColor}, inset {_offset}px {_offset}px {_blur}px {lightColor};";
                         break;
                 }
             }
@@ -124,63 +122,20 @@ namespace fukicycle.Blazor.Neumorphism.Design.Base
                 switch (LightLocation)
                 {
                     case LightLocation.TOP_LEFT:
-                        _style += $"box-shadow: {offset}px {offset}px {blur}px {darkColor}, -{offset}px -{offset}px {blur}px {lightColor};";
+                        _style += $"box-shadow: {_offset}px {_offset}px {_blur}px {darkColor}, -{_offset}px -{_offset}px {_blur}px {lightColor};";
                         break;
                     case LightLocation.TOP_RIGHT:
-                        _style += $"box-shadow: -{offset}px {offset}px {blur}px {darkColor}, {offset}px -{offset}px {blur}px {lightColor};";
+                        _style += $"box-shadow: -{_offset}px {_offset}px {_blur}px {darkColor}, {_offset}px -{_offset}px {_blur}px {lightColor};";
                         break;
                     case LightLocation.BOTTOM_LEFT:
-                        _style += $"box-shadow: {offset}px -{offset}px {blur}px {darkColor}, -{offset}px {offset}px {blur}px {lightColor};";
+                        _style += $"box-shadow: {_offset}px -{_offset}px {_blur}px {darkColor}, -{_offset}px {_offset}px {_blur}px {lightColor};";
                         break;
                     case LightLocation.BOTTOM_RIGHT:
-                        _style += $"box-shadow: -{offset}px -{offset}px {blur}px {darkColor}, {offset}px {offset}px {blur}px {lightColor};";
+                        _style += $"box-shadow: -{_offset}px -{_offset}px {_blur}px {darkColor}, {_offset}px {_offset}px {_blur}px {lightColor};";
                         break;
                 }
             }
             StateHasChanged();
-        }
-
-        public class BaseColor
-        {
-            public BaseColor(byte red, byte green, byte blue)
-            {
-                Red = red;
-                Green = green;
-                Blue = blue;
-            }
-            public byte Red { get; }
-            public byte Green { get; }
-            public byte Blue { get; }
-
-            public string GetBaseColor()
-            {
-                return "#" + Red.ToString("X2") + Green.ToString("X2") + Blue.ToString("X2");
-            }
-
-            public string GetLightColor()
-            {
-                Color color = System.Drawing.Color.FromArgb(Red, Green, Blue);
-                HslColor hsl = HslColor.FromRgb(color);
-                hsl.L = hsl.L + 0.1f;
-                if (hsl.L > 1) hsl.L = 1;
-                Color lightColor = HslColor.ToRgb(hsl);
-                return "#" + lightColor.R.ToString("X2")
-                    + lightColor.G.ToString("X2")
-                    + lightColor.B.ToString("X2");
-
-            }
-
-            public string GetDarkColor()
-            {
-                Color color = System.Drawing.Color.FromArgb(Red, Green, Blue);
-                HslColor hsl = HslColor.FromRgb(color);
-                hsl.L = hsl.L - 0.1f;
-                if (hsl.L < 0) hsl.L = 0;
-                Color darkColor = HslColor.ToRgb(hsl);
-                return "#" + darkColor.R.ToString("X2")
-                    + darkColor.G.ToString("X2")
-                    + darkColor.B.ToString("X2");
-            }
         }
     }
 }

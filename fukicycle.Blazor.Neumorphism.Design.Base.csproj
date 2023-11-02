@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <PackageId>Neumorphism.Design.Base</PackageId>
     <Title>Neumorphism.Design.Base</Title>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Description>Provides a neumorphism desing for blazor app.</Description>
     <AssemblyName>Neumorphism.Design.Base</AssemblyName>
     <Authors>fukicycle</Authors>
@@ -23,11 +23,13 @@
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
-    <None Include="README.md" Pack="true" PackagePath="\"/>
+    <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.23" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.23" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
   </ItemGroup>
 
 </Project>
