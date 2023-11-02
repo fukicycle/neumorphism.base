@@ -40,37 +40,35 @@ app.UseNeumorphism(BaseColor.Parse("#CDD6EE"));
 
 <PageTitle>Index</PageTitle>
 
-@*Default ShapeType=FLOAT,LightLocation=TOP_LEFT*@
-<Neumorphism>
-    <h1>Hello, world!</h1>
+<Neumorphism class="mb-4 mx-4" ShapeType="ShapeType.CONCAVE" BorderRadius="50%" LightLocation="LightLocation.TOP_RIGHT">
+    <div style="display:flex; aspect-ratio: 1; width:100%; align-items:center;justify-content:center;">
+        <h1>Hello, world!</h1>
+    </div>
 </Neumorphism>
-
-@*ShapeType=SINK,LightLocation=TOP_LEFT*@
-<Neumorphism ShapeType="ShapeType.SINK">
-    Welcome to your new app.
-</Neumorphism>
-
-@*ShapeType=CONCAVE,LightLocation=TOP_LEFT*@
-<Neumorphism ShapeType="ShapeType.CONCAVE">
+<Neumorphism class="m-4" ShapeType="ShapeType.CONVEX">
     <SurveyPrompt Title="How is Blazor working for you?" />
 </Neumorphism>
-
-@*apply input tag*@
-<Neumorphism>
-    <input type="date" />
+<Neumorphism class="m-4">
+    <select>
+        <option>I like blazor.</option>
+        <option>I don't like blazor.</option>
+    </select>
 </Neumorphism>
-
-@*ShapeType=CONVEX,LightLocation=BOTTOM_RIGHT*@
-<Neumorphism ShapeType="ShapeType.CONCAVE" LightLocation="LightLocation.BOTTOM_RIGHT">
-    <div style="width: 100%; aspect-ratio: 1; display:flex; align-items: center; justify-content:center;">
-        <div>Hello!</div>
-    </div>
+<Neumorphism class="m-4">
+    <button>OK</button>
+</Neumorphism>
+<Neumorphism class="m-4" ShapeType="ShapeType.SINK">
+    <input type="text" />
+</Neumorphism>
+<Neumorphism class="m-4" ShapeType="ShapeType.SINK">
+    <input type="date" />
 </Neumorphism>
 ```
 
 **Please note that you have to set same color to root element. (`<body/>`)**
 
-<img width="292" alt="image" src="https://github.com/fukicycle/neumorphism.design.base/assets/106070646/7fd8d7ea-6dc0-423a-bd39-c550d94eedb4">
+<img width="312" alt="image" src="https://github.com/fukicycle/neumorphism.design.base/assets/106070646/086da940-e1b3-492b-8507-775a0e3950b9">
+
 
 ## Contributing
 Pull requests and stars are always welcome.
