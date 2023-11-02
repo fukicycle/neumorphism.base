@@ -1,5 +1,4 @@
-﻿using fukicycle.blazor.neumorphism.components;
-using Microsoft.AspNetCore.Components;
+﻿using Microsoft.AspNetCore.Components;
 using System.Drawing;
 
 namespace fukicycle.Blazor.Neumorphism.Design.Base

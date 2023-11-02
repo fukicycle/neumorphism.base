@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace fukicycle.blazor.neumorphism.components
+﻿namespace fukicycle.Blazor.Neumorphism.Design.Base
 {
     public enum LightLocation
     {
