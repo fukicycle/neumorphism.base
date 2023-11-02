@@ -35,7 +35,7 @@ dotnet add package Neumorphism.Design.Base --version <version>
 app.UseNeumorphism(BaseColor.Parse("#e0e0e0"));
 ```
 1. Add `Neumorphism` components! (`Index.razor`)
-```csharp
+```razor
 @page "/"
 
 <PageTitle>Index</PageTitle>
