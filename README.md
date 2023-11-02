@@ -40,7 +40,7 @@ app.UseNeumorphism(BaseColor.Parse("#CDD6EE"));
 
 <PageTitle>Index</PageTitle>
 
-<Neumorphism class="mb-4 mx-4" ShapeType="ShapeType.CONCAVE" BorderRadius="50%" LightLocation="LightLocation.TOP_RIGHT">
+<Neumorphism class="mb-4 mx-4" ShapeType="ShapeType.CONCAVE" BorderRadius="50%">
     <div style="display:flex; aspect-ratio: 1; width:100%; align-items:center;justify-content:center;">
         <h1>Hello, world!</h1>
     </div>
@@ -67,8 +67,7 @@ app.UseNeumorphism(BaseColor.Parse("#CDD6EE"));
 
 **Please note that you have to set same color to root element. (`<body/>`)**
 
-<img width="312" alt="image" src="https://github.com/fukicycle/neumorphism.design.base/assets/106070646/086da940-e1b3-492b-8507-775a0e3950b9">
-
+![image](https://github.com/fukicycle/neumorphism.design.base/assets/106070646/2d3c6cce-8031-48b0-9a40-63f8d321494e)
 
 ## Contributing
 Pull requests and stars are always welcome.
