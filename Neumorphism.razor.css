@@ -1,12 +1,5 @@
 ﻿#neumorphism-base {
-    --nf-base: #e0e0e0;
-    --nf-light: #ffffff;
-    --nf-dark: #bebebe;
-}
-
-#neumorphism-base {
     padding: .5rem;
-    border-radius: .7rem;
     margin: 1rem;
 }
 
