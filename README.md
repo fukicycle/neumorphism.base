@@ -68,7 +68,7 @@ app.UseNeumorphism(BaseColor.Parse("#e0e0e0"));
 </Neumorphism>
 
 ```
-![image](https://github.com/fukicycle/neumorphism.design.base/assets/106070646/296843a8-f540-46ce-8084-bcd3983861ee)
+<img width="292" alt="image" src="https://github.com/fukicycle/neumorphism.design.base/assets/106070646/7fd8d7ea-6dc0-423a-bd39-c550d94eedb4">
 
 ## Contributing
 Pull requests and stars are always welcome.
