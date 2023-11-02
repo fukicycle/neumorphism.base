@@ -12,11 +12,11 @@ Provides a neumorphism design base for blazor app. It is very easy to apply neum
 ### 1. install package.
 `Neumorphism.Base` is available for download and installation as [NuGet packages](https://www.nuget.org/packages/Neumorphism.Design.Base).
 ```
-dotnet add package Neumorphism.Desgin.Base --version <version>
+dotnet add package Neumorphism.Design.Base --version <version>
 ```
 
 ### 2. Create your blazor app.
-1. Add using `fukicycle.Blazor.Neumorphism.Design.Base` (_Imports.razor)
+1. Add using `fukicycle.Blazor.Neumorphism.Design.Base` (`_Imports.razor`)
 ```diff
 @using System.Net.Http
 @using Microsoft.AspNetCore.Authorization
@@ -30,41 +30,44 @@ dotnet add package Neumorphism.Desgin.Base --version <version>
 @using BlazorApp1.Shared
 + @using fukicycle.Blazor.Neumorphism.Design.Base
 ```
-1. Add `Neumorphism` components! (`Index.razor`)
+1. Add `UseNeumorphism(BaseColor.Parse("#CDD6EE"))` (`Program.cs`)
 ```csharp
+app.UseNeumorphism(BaseColor.Parse("#CDD6EE"));
+```
+1. Add `Neumorphism` components! (`Index.razor`)
+```razor
 @page "/"
 
 <PageTitle>Index</PageTitle>
 
-@*Default ShapeType=FLOAT,LightLocation=TOP_LEFT*@
-<Neumorphism>
-    <h1>Hello, world!</h1>
-</Neumorphism>
-
-@*ShapeType=SINK,LightLocation=TOP_LEFT*@
-<Neumorphism ShapeType="ShapeType.SINK">
-    Welcome to your new app.
-</Neumorphism>
-
-@*ShapeType=CONCAVE,LightLocation=TOP_LEFT*@
-<Neumorphism ShapeType="ShapeType.CONCAVE">
-    <SurveyPrompt Title="How is Blazor working for you?" />
-</Neumorphism>
-
-@*apply input tag*@
-<Neumorphism>
-    <input type="date" />
-</Neumorphism>
-
-@*ShapeType=CONVEX,LightLocation=BOTTOM_RIGHT*@
-<Neumorphism ShapeType="ShapeType.CONCAVE" LightLocation="LightLocation.BOTTOM_RIGHT">
-    <div style="width: 100%; aspect-ratio: 1; display:flex; align-items: center; justify-content:center;">
-        <div>Hello!</div>
+<Neumorphism class="mb-4 mx-4" ShapeType="ShapeType.CONCAVE" BorderRadius="50%">
+    <div style="display:flex; aspect-ratio: 1; width:100%; align-items:center;justify-content:center;">
+        <h1>Hello, world!</h1>
     </div>
 </Neumorphism>
-
+<Neumorphism class="m-4" ShapeType="ShapeType.CONVEX">
+    <SurveyPrompt Title="How is Blazor working for you?" />
+</Neumorphism>
+<Neumorphism class="m-4">
+    <select>
+        <option>I like blazor.</option>
+        <option>I don't like blazor.</option>
+    </select>
+</Neumorphism>
+<Neumorphism class="m-4">
+    <button>OK</button>
+</Neumorphism>
+<Neumorphism class="m-4" ShapeType="ShapeType.SINK">
+    <input type="text" />
+</Neumorphism>
+<Neumorphism class="m-4" ShapeType="ShapeType.SINK">
+    <input type="date" />
+</Neumorphism>
 ```
-![image](https://github.com/fukicycle/neumorphism.design.base/assets/106070646/296843a8-f540-46ce-8084-bcd3983861ee)
+
+**Please note that you have to set same color to root element. (`<body/>`)**
+
+![image](https://github.com/fukicycle/neumorphism.design.base/assets/106070646/2d3c6cce-8031-48b0-9a40-63f8d321494e)
 
 ## Contributing
 Pull requests and stars are always welcome.
