@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
-namespace fukicycle.blazor.neumorphism.components
+namespace fukicycle.Blazor.Neumorphism.Design.Base
 {
     /// <summary>
     /// HSL (HLS) カラーを表す
