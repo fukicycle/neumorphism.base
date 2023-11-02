@@ -1,6 +1,6 @@
 # Neumorphism.Base
-![Nuget](https://www.nuget.org/packages/Neumorphism.Base)
-![GitHub](https://github.com/fukicycle/neumorphism.base)
+![Nuget](https://www.nuget.org/packages/Neumorphism.Design.Base)
+![GitHub](https://github.com/fukicycle/neumorphism.design.base)
 Provides a neumorphism design base for blazor app. It is very easy to apply neumophism design.
 
 ## Features
@@ -8,9 +8,9 @@ Provides a neumorphism design base for blazor app. It is very easy to apply neum
 
 ## Installing and Getting started
 ### 1. install package.
-`Neumorphism.Base` is available for download and installation as [NuGet packages](https://www.nuget.org/packages/Neumorphism.Base).
+`Neumorphism.Base` is available for download and installation as [NuGet packages](https://www.nuget.org/packages/Neumorphism.Design.Base).
 ```
-dotnet add package Neumorphism.Base --version <version>
+dotnet add package Neumorphism.Desgin.Base --version <version>
 ```
 
 ### 2. Create your blazor app.
