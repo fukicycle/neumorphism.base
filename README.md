@@ -16,10 +16,55 @@ dotnet add package Neumorphism.Desgin.Base --version <version>
 ```
 
 ### 2. Create your blazor app.
-
-```csharp
-//comming soon!
+1. Add using `fukicycle.Blazor.Neumorphism.Design.Base` (_Imports.razor)
+```diff
+@using System.Net.Http
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.Web.Virtualization
+@using Microsoft.JSInterop
+@using BlazorApp1
+@using BlazorApp1.Shared
++ @using fukicycle.Blazor.Neumorphism.Design.Base
 ```
+1. Add `Neumorphism` components! (`Index.razor`)
+```csharp
+@page "/"
+
+<PageTitle>Index</PageTitle>
+
+@*Default ShapeType=FLOAT,LightLocation=TOP_LEFT*@
+<Neumorphism>
+    <h1>Hello, world!</h1>
+</Neumorphism>
+
+@*ShapeType=SINK,LightLocation=TOP_LEFT*@
+<Neumorphism ShapeType="ShapeType.SINK">
+    Welcome to your new app.
+</Neumorphism>
+
+@*ShapeType=CONCAVE,LightLocation=TOP_LEFT*@
+<Neumorphism ShapeType="ShapeType.CONCAVE">
+    <SurveyPrompt Title="How is Blazor working for you?" />
+</Neumorphism>
+
+@*apply input tag*@
+<Neumorphism>
+    <input type="date" />
+</Neumorphism>
+
+@*ShapeType=CONVEX,LightLocation=BOTTOM_RIGHT*@
+<Neumorphism ShapeType="ShapeType.CONCAVE" LightLocation="LightLocation.BOTTOM_RIGHT">
+    <div style="width: 100%; aspect-ratio: 1; display:flex; align-items: center; justify-content:center;">
+        <div>Hello!</div>
+    </div>
+</Neumorphism>
+
+```
+![image](https://github.com/fukicycle/neumorphism.design.base/assets/106070646/296843a8-f540-46ce-8084-bcd3983861ee)
 
 ## Contributing
 Pull requests and stars are always welcome.
