@@ -40,13 +40,17 @@ app.UseNeumorphism(BaseColor.Parse("#CDD6EE"));
 
 <PageTitle>Index</PageTitle>
 
-<Neumorphism class="mb-4 mx-4" ShapeType="ShapeType.CONCAVE" BorderRadius="50%">
-    <div style="display:flex; aspect-ratio: 1; width:100%; align-items:center;justify-content:center;">
-        <h1>Hello, world!</h1>
-    </div>
+<Neumorphism class="mb-4 mx-4" ShapeType="ShapeType.CONCAVE" BorderRadius="50%" LightLocation="LightLocation.TOP_LEFT">
+    <Neumorphism ShapeType="ShapeType.CONVEX" BorderRadius="50%">
+        <div style="display:flex; aspect-ratio: 1; width:100%; align-items:center;justify-content:center;">
+            <h1>Hello, world!</h1>
+        </div>
+    </Neumorphism>
 </Neumorphism>
-<Neumorphism class="m-4" ShapeType="ShapeType.CONVEX">
-    <SurveyPrompt Title="How is Blazor working for you?" />
+<Neumorphism class="m-4" ShapeType="ShapeType.FLOAT">
+    <Neumorphism ShapeType="ShapeType.SINK">
+        <SurveyPrompt Title="How is Blazor working for you?" />
+    </Neumorphism>
 </Neumorphism>
 <Neumorphism class="m-4">
     <select>
@@ -67,7 +71,7 @@ app.UseNeumorphism(BaseColor.Parse("#CDD6EE"));
 
 **Please note that you have to set same color to root element. (`<body/>`)**
 
-![image](https://github.com/fukicycle/neumorphism.design.base/assets/106070646/2d3c6cce-8031-48b0-9a40-63f8d321494e)
+![image](https://github.com/fukicycle/neumorphism.design.base/assets/106070646/48d5bebb-6848-4f29-93bb-d14a70137b10)
 
 ## Contributing
 Pull requests and stars are always welcome.
