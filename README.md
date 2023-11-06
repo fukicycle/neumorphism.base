@@ -10,7 +10,7 @@ Provides a neumorphism design base for blazor app. It is very easy to apply neum
 
 ## Installing and Getting started
 ### 1. install package.
-`Neumorphism.Base` is available for download and installation as [NuGet packages](https://www.nuget.org/packages/Neumorphism.Design.Base).
+`Neumorphism.Design.Base` is available for download and installation as [NuGet packages](https://www.nuget.org/packages/Neumorphism.Design.Base).
 ```
 dotnet add package Neumorphism.Design.Base --version <version>
 ```
